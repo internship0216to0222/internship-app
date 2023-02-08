@@ -4,7 +4,7 @@ env:
   variables:
     AWS_ACCOUNT_ID: 868298891538
     AWS_DEFAULT_REGION: ap-northeast-1
-    IMAGE_REPOSITORY_NAME: "868298891538.dkr.ecr.ap-northeast-1.amazonaws.com/internship"
+    IMAGE_REPOSITORY_NAME: "868298891538.dkr.ecr.ap-northeast-1.amazonaws.com/internship-app"
     IMAGE_TAG: "latest"
 
 phases:
