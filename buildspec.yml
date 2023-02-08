@@ -22,7 +22,7 @@ phases:
       - ./gradlew build
       - docker build -t $IMAGE_REPOSITORY_NAME:$IMAGE_TAG .
       - docker push $IMAGE_REPOSITORY_NAME:$IMAGE_TAG
-      - printf '[{"name":"internship", "imageUri":"%s"}]' $$IMAGE_REPOSITORY_NAME:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"internship-app", "imageUri":"%s"}]' $IMAGE_REPOSITORY_NAME:$IMAGE_TAG > imagedefinitions.json
 
   artifacts:
     files: imagedefinitions.json
