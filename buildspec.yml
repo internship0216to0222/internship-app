@@ -16,7 +16,6 @@ phases:
     commands:
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
       - docker-compose up -d
-      - sed -i -e 's/https\\\:\/\/services.gradle.org\/distributions/file\\:\/\/\/cache\/gradle/' gradle/wrapper/gradle-wrapper/properties
   build:
     commands:
       - ./gradlew build
@@ -24,5 +23,5 @@ phases:
       - docker push $IMAGE_REPOSITORY_NAME:$IMAGE_TAG
       - printf '[{"name":"internship-app", "imageUri":"%s"}]' $IMAGE_REPOSITORY_NAME:$IMAGE_TAG > imagedefinitions.json
 
-  artifacts:
-    files: imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
