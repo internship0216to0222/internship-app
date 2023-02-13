@@ -8,4 +8,4 @@ RUN rm -f /etc/localtime && \
 
 ADD ./build/libs/internship-app.jar /opt/spring-boot/
 
-ENTRYPOINT ["java", "-jar", "/opt/spring-boot/intenship-app.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/spring-boot/internship-app.jar"]
