@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: 868298891538.dkr.ecr.ap-northeast-1.amazonaws.com/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: internship
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    volumes:
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
