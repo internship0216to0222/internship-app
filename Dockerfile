@@ -1,4 +1,4 @@
-FROM amazoncoretto:17.0.6
+FROM amazoncorretto:17.0.6
 
 ENV SPRING_BOOT_HOME=/opt/spring-boot \
     LANG=ja_JP.UTF-8
