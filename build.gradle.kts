@@ -24,7 +24,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.flywaydb:flyway-core")
 	runtimeOnly("mysql:mysql-connector-java")
-	compileOnly("org.flywaydb:flyway-mysql")
+	compileOnly("org.flywaydb:flyway-mysql:9.14.1")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 }
