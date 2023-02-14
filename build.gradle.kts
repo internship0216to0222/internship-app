@@ -23,8 +23,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.flywaydb:flyway-core")
+	implementation("org.flywaydb:flyway-mysql:9.14.1")
 	runtimeOnly("mysql:mysql-connector-java")
-	compileOnly("org.flywaydb:flyway-mysql:9.14.1")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 }
