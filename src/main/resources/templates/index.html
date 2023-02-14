@@ -1,13 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>internship-app</title>
 </head>
 <body>
-    internship-app
+    <h2>internship-app</h2>
+    <div th:object="${users}">
+        <div th:each="user : ${users}">
+            <table>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td th:text="${user.emailAddress}"></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td th:text="${user.phoneNumber}"></td>
+                </tr>
+                <tr>
+                    <td>銀行</td>
+                    <td th:text="${user.bank}"></td>
+                </tr>
+                <tr>
+                    <td>支店</td>
+                    <td th:text="${user.branch}"></td>
+                </tr>
+                <tr>
+                    <td>科目</td>
+                    <td th:text="${user.accountType}"></td>
+                </tr>
+                <tr>
+                    <td>口座番号</td>
+                    <td th:text="${user.accountNumber}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

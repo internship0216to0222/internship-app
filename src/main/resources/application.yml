@@ -3,6 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/internship
     username: user
     password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   flyway:
     enabled: true
