@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -36,6 +36,16 @@
                     <td>口座番号</td>
                     <td th:text="${user.accountNumber}"></td>
                 </tr>
+                <tr th:each="history : ${user.userLoginHistories}">
+                    <td th:if="${history.id == user.userLoginHistories.size()}">ログイン履歴</td>
+                    <td th:unless="${history.id == user.userLoginHistories.size()}"></td>
+                    <td th:text="${history.userAgent}"></td>
+                    <td th:text="${history.sourceIpAddress}"></td>
+                    <td th:text="${history.loggedInAt}"></td>
+                </tr>
+            </table>
+            <table>
+
             </table>
         </div>
     </div>

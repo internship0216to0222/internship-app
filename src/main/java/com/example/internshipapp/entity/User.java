@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,4 +24,6 @@ public class User {
     private int accountType;
 
     private String accountNumber;
+
+    private List<UserLoginHistory> userLoginHistories;
 }
