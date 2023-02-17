@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
     @Query
-    List<User> findAll();
+    List<User> findAllBy();
 
 }

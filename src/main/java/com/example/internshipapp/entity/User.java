@@ -1,6 +1,7 @@
 package com.example.internshipapp.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 @Data
 @Table(name = "user")
 public class User {
+    @Id
     private int id;
 
     private String email_address;
