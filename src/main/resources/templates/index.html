@@ -1,13 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ユーザー情報一覧</title>
 </head>
 <body>
-    internship-app test
+    <h1>ユーザー情報一覧</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>メールアドレス</th>
+            <th>電話番号</th>
+            <th>銀行名</th>
+            <th>支店名</th>
+            <th>科目</th>
+            <th>口座番号</th>
+            <th>開設日時</th>
+            <th>更新日時</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}" th:object="${users}">
+            <td class="center" th:text="${user.id}"></td>
+            <td th:text="${user.email_address}"></td>
+            <td class="center" th:text="${user.phone_number}"></td>
+            <td class="center" th:text="${user.bank}"></td>
+            <td class="center" th:text="${user.branch}"></td>
+            <td class="center" th:text="${user.account_type}"></td>
+            <td class="center" th:text="${user.account_number}"></td>
+<!--            <p th:text="${#dates.format(user.created_at, 'yyyy/MM/dd HH:mm:ss')}"></p>-->
+<!--            <p th:text="|currentDateTime = ${#temporals.format(currentDateTime, 'G uuuu/MM/dd E', locale)}.|"></p>-->
+            <td class="center" th:text="${user.created_at}"></td>
+            <td class="center" th:text="${user.updated_at}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
