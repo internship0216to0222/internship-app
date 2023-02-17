@@ -77,31 +77,49 @@
                 <div class="row">
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
-                            name
+                            名前
                         </div>
                     </div>
 
                     <div class="col-3 border">
                         <div class="container">
-                            kouza
+                            口座番号
+                            <p th:each="user : ${users}" th:object="${users}"
+                               th:text="${user.account_number}">
+
+                            科目
+                            <p th:each="user : ${users}" th:object="${users}"
+                               th:text="${user.account_type}">
+
                         </div>
                     </div>
                     <div class="col-3 border">picture1</div>
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
-                            meado & dennwa
+                            メールアドレス＆電話番号
                         </div>
                     </div>
 
                     <div class="col-3 border">picture2</div>
-                    <div class="col-3 border">sitenn</div>
+                    <div class="col-3 border">
+                        支店
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.branch}">
+                    </div>
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
                         ID
                         </div>
                     </div>
 
-                    <div class="col-3 border">kaisetu3</div>
+                    <div class="col-3 border">
+                        開設情報
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.created_at}">
+                        更新情報
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.updated_at}">
+                    </div>
                     <div class="col-3 border">picture</div>
 
 
