@@ -21,7 +21,7 @@ public class User {
 
     private String branch;
 
-    private int account_type;
+    private String account_type;
 
     private String account_number;
 

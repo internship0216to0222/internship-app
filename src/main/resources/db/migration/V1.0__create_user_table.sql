@@ -4,7 +4,7 @@ CREATE TABLE user (
     phone_number         VARCHAR(256) NOT NULL,
     bank                 VARCHAR(50)  NOT NULL,
     branch               VARCHAR(50)  NOT NULL,
-    account_type         TINYINT      NOT NULL,
+    account_type         VARCHAR(7)   NOT NULL,
     account_number       VARCHAR(7)   NOT NULL,
     created_at           DATETIME     NOT NULL,
     updated_at           DATETIME     NOT NULL,
