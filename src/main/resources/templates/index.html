@@ -11,15 +11,13 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
-<nav class="navbar navbar-light bg-white">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            HOME画面
-        </a>
-    </div>
-</nav>
-
 <body class="background">
+<header>
+    <img th:src="@{/Test_image/header.png}" style="width: 100%;height: 150px;" class="posi">
+<!--        <div class="contents_header"></div>-->
+    </img>
+</header>
+
 <div class="contents">
     <div class="font_color">
         <div class="container-md">
@@ -98,6 +96,9 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 </div>
+<footer>
+    <img th:src="@{/Test_image/footer.png}" style="width: 100%;height: 150px;">
+</footer>
 </body>
 
 </html>
