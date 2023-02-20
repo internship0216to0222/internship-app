@@ -84,11 +84,12 @@
 <!--            &lt;!&ndash;            <p th:text="|currentDateTime = ${#temporals.format(currentDateTime, 'G uuuu/MM/dd E', locale)}.|"></p>&ndash;&gt;-->
 <!--            <td class="center" th:text="${user.created_at}"></td>-->
 <!--            <td class="center" th:text="${user.updated_at}"></td>-->
+        <div class="font-color">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6 border-white ">
                         <div class="container" style = "height:200px;">
-                            名前
+                            <h2><font face="ＭＳ Ｐ明朝">名前</font></h2>
                             <p th:each="user : ${users}" th:object="${users}"
                                th:text="${user.name}">
                         </div>
@@ -96,7 +97,7 @@
 
                     <div class="col-3 border">
                         <div class="container">
-                            口座番号
+                            <h2><font face="ＭＳ Ｐ明朝">口座番号</font></h2>
                             <p th:each="user : ${users}" th:object="${users}"
                                th:text="${user.account_number}">
 
@@ -109,24 +110,25 @@
                     <div class="col-3 border">picture1</div>
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
-                            電話番号
+                            <h2><font face="ＭＳ Ｐ明朝">電話番号</font></h2>
                             <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.phone_number}">
-                            <p>メールアドレス</p>
+                               th:text="${user.phone_number}">　
+                            <h2><font face="ＭＳ Ｐ明朝">メールアドレス</font></h2>
                             <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.email_address}">
+                                th:text="${user.email_address}">
+
                         </div>
                     </div>
 
                     <div class="col-3 border">picture2</div>
                     <div class="col-3 border">
-                        支店
+                        <h3><font face="ＭＳ Ｐ明朝">支店</font></h3>
                         <p th:each="user : ${users}" th:object="${users}"
                            th:text="${user.branch}">
                     </div>
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
-                            ID
+                            <h2><font face="ＭＳ Ｐ明朝">ID</font></h2>
                             <p th:each="user : ${users}" th:object="${users}"
                                th:text="${user.id}">
                         </div>
