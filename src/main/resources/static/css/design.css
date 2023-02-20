@@ -2,12 +2,6 @@
     background-color: #50b7e7;
 }
 
-/*table.sample1 {*/
-/*    width:280px; height:130px; background-color:#ccecf4;*/
-/*    border:solid 20px #7fcfe2;*/
-/*    border-radius: 100px 25px 50px 50px / 50px 25px 50px 25px;*/
-/*}*/
-
 .contents {
     max-width: 100%;
     /*width: 90%;*/
@@ -21,3 +15,8 @@
     color: #ffffff;
     text-align: center;
 }
+
+.font_color{
+    color: black;
+}
+

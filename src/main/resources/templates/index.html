@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ユーザー情報一覧</title>
     <link rel="stylesheet" th:href="@{css/design.css}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <nav class="navbar navbar-light bg-white">
@@ -19,152 +20,83 @@
 </nav>
 
 <body class="background">
-<!--<p class="sample1">-->
-<!--    <div class = "bg-white border">-->
-<!--    <h1>FFG HOME 画面</h1>-->
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>ID</th>-->
-<!--            <th>メールアドレス</th>-->
-<!--            <th>電話番号</th>-->
-<!--            <th>銀行名</th>-->
-<!--            <th>支店名</th>-->
-<!--            <th>科目</th>-->
-<!--            <th>口座番号</th>-->
-<!--            <th>開設日時</th>-->
-<!--            <th>更新日時</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr th:each="user : ${users}" th:object="${users}">-->
-<!--            <td class="center" th:text="${user.id}"></td>-->
-<!--            <td th:text="${user.email_address}"></td>-->
-<!--            <td class="center" th:text="${user.phone_number}"></td>-->
-<!--            <td class="center" th:text="${user.bank}"></td>-->
-<!--            <td class="center" th:text="${user.branch}"></td>-->
-<!--            <td class="center" th:text="${user.account_type}"></td>-->
-<!--            <td class="center" th:text="${user.account_number}"></td>-->
-<!--&lt;!&ndash;            <p th:text="${#dates.format(user.created_at, 'yyyy/MM/dd HH:mm:ss')}"></p>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p th:text="|currentDateTime = ${#temporals.format(currentDateTime, 'G uuuu/MM/dd E', locale)}.|"></p>&ndash;&gt;-->
-<!--            <td class="center" th:text="${user.created_at}"></td>-->
-<!--            <td class="center" th:text="${user.updated_at}"></td>-->
-
-
-<!--        </tr>-->
-
-<!--        </tbody>-->
-<!--    </table>-->
 <div class="contents">
-    <table class="table">
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th scope="col">ID</th>-->
-<!--            <th scope="col">メールアドレス</th>-->
-<!--            <th scope="col">電話番号</th>-->
-<!--            <th scope="col">銀行名</th>-->
-<!--            <th scope="col">支店名</th>-->
-<!--            <th scope="col">科目</th>-->
-<!--            <th scope="col">口座番号</th>-->
-<!--            <th scope="col">開設日時</th>-->
-<!--            <th scope="col">更新日時</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr>-->
-<!--&lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-<!--        <tr th:each="user : ${users}" th:object="${users}">-->
-<!--            <td class="center" th:text="${user.id}"></td>-->
-<!--            <td th:text="${user.email_address}"></td>-->
-<!--            <td class="center" th:text="${user.phone_number}"></td>-->
-<!--            <td class="center" th:text="${user.bank}"></td>-->
-<!--            <td class="center" th:text="${user.branch}"></td>-->
-<!--            <td class="center" th:text="${user.account_type}"></td>-->
-<!--            <td class="center" th:text="${user.account_number}"></td>-->
-<!--            &lt;!&ndash;            <p th:text="${#dates.format(user.created_at, 'yyyy/MM/dd HH:mm:ss')}"></p>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <p th:text="|currentDateTime = ${#temporals.format(currentDateTime, 'G uuuu/MM/dd E', locale)}.|"></p>&ndash;&gt;-->
-<!--            <td class="center" th:text="${user.created_at}"></td>-->
-<!--            <td class="center" th:text="${user.updated_at}"></td>-->
-            <div class="container-md">
-                <div class="row">
-                    <div class="col-6 border-white ">
-                        <div class="container" style = "height:200px;">
-                            名前
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.name}">
-                        </div>
+    <div class="font_color">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-6 border-white ">
+                    <div class="container" style="height:200px;">
+                        <h2><font face="ＭＳ Ｐ明朝">名前</font></h2>
+                        <h4 th:each="user : ${users}" th:object="${users}"
+                            th:text="${user.name}"</h4>
                     </div>
+                </div>
 
-                    <div class="col-3 border">
-                        <div class="container">
-                            口座番号
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.account_number}">
-
-                            <p>科目 </p>
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.account_type}">
-
-                        </div>
-                    </div>
-                    <div class="col-3 border">picture1</div>
-                    <div class="col-6 border-white">
-                        <div class="container" style = "height:200px;">
-                            電話番号
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.phone_number}">
-                            <p>メールアドレス</p>
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.email_address}">
-                        </div>
-                    </div>
-
-                    <div class="col-3 border">picture2</div>
-                    <div class="col-3 border">
-                        支店
+                <div class="col-3 border">
+                    <div class="container">
+                        <h2><font face="ＭＳ Ｐ明朝">口座番号</font></h2>
                         <p th:each="user : ${users}" th:object="${users}"
-                           th:text="${user.branch}">
-                    </div>
-                    <div class="col-6 border-white">
-                        <div class="container" style = "height:200px;">
-                            ID
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.id}">
-                        </div>
-                    </div>
-
-                    <div class="col-3 border">
-                        開設情報
+                           th:text="${user.account_number}">
+                        <h2><font face="ＭＳ Ｐ明朝">科目</font></h2>
                         <p th:each="user : ${users}" th:object="${users}"
-                           th:text="${user.created_at}">
-                        <p>更新情報</p>
-                        <p th:each="user : ${users}" th:object="${users}"
-                           th:text="${user.updated_at}">
+                           th:text="${user.account_type}">
                     </div>
-                    <div class="col-3 border">picture</div>
+                </div>
+                <div class="col-3 border">
+                    <img th:src="@{/Test_image/bank.png}" style="width: 300px;height: 200px;">
+                </div>
 
-
+                <div class="col-6 border-white">
+                    <div class="container" style="height:200px;">
+                        <h2><font face="ＭＳ Ｐ明朝">電話番号</font></h2>
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.phone_number}">　
+                        <h2><font face="ＭＳ Ｐ明朝">メールアドレス</font></h2>
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.email_address}">
+                    </div>
+                </div>
+                <div class="col-3 border">
+                    <img th:src="@{/Test_image/bank2.png}" style="width: 300px;height: 200px;">
+                </div>
+                <div class="col-3 border">
+                    <h3><font face="ＭＳ Ｐ明朝">銀行</font></h3>
+                    <p th:each="user : ${users}" th:object="${users}"
+                       th:text="${user.bank}">
+                    <h3><font face="ＭＳ Ｐ明朝">支店</font></h3>
+                    <p th:each="user : ${users}" th:object="${users}"
+                       th:text="${user.branch}">
+                </div>
+                <div class="col-6 border-white">
+                    <div class="container" style="height:200px;">
+                        <h2><font face="ＭＳ Ｐ明朝">ID</font></h2>
+                        <p th:each="user : ${users}" th:object="${users}"
+                           th:text="${user.id}">
+                    </div>
+                </div>
+                <div class="col-3 border">
+                    <p>開設情報</p>
+                    <p th:each="user : ${users}" th:object="${users}"
+                       th:text="${user.created_at}">
+                    <p>更新情報</p>
+                    <p th:each="user : ${users}" th:object="${users}"
+                       th:text="${user.updated_at}">
+                </div>
+                <div class="col-3 border">
+                    <img th:src="@{/Test_image/bank3.png}" style="width: 300px;height: 200px;">
                 </div>
             </div>
-        </tr>
-
-<!--        <tr>-->
-<!--            <th scope="row">2</th>-->
-<!--            <td>Jacob</td>-->
-<!--            <td>Thornton</td>-->
-<!--            <td>@fat</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--            <th scope="row">3</th>-->
-<!--            <td colspan="2">Larry the Bird</td>-->
-<!--            <td>@twitter</td>-->
-<!--        </tr>-->
-        </tbody>
-    </table>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!--    </div>-->
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 </div>
 </body>
 
