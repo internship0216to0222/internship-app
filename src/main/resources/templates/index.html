@@ -90,8 +90,9 @@
                     <div class="col-6 border-white ">
                         <div class="container" style = "height:200px;">
                             <h2><font face="ＭＳ Ｐ明朝">名前</font></h2>
-                            <p th:each="user : ${users}" th:object="${users}"
-                               th:text="${user.name}">
+                            <h4  th:each="user : ${users}" th:object="${users}"
+                               th:text="${user.name}"</h4
+                                >
                         </div>
                     </div>
 
@@ -107,7 +108,10 @@
 
                         </div>
                     </div>
-                    <div class="col-3 border">picture1</div>
+                    <div class="col-3 border">
+                        <img th:src="@{/Test_image/Test_yumo.png}" >
+                    </div>
+
                     <div class="col-6 border-white">
                         <div class="container" style = "height:200px;">
                             <h2><font face="ＭＳ Ｐ明朝">電話番号</font></h2>
@@ -121,6 +125,7 @@
                     </div>
 
                     <div class="col-3 border">picture2</div>
+
                     <div class="col-3 border">
                         <h3><font face="ＭＳ Ｐ明朝">支店</font></h3>
                         <p th:each="user : ${users}" th:object="${users}"
