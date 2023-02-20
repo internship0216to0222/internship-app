@@ -84,7 +84,7 @@
 <!--            &lt;!&ndash;            <p th:text="|currentDateTime = ${#temporals.format(currentDateTime, 'G uuuu/MM/dd E', locale)}.|"></p>&ndash;&gt;-->
 <!--            <td class="center" th:text="${user.created_at}"></td>-->
 <!--            <td class="center" th:text="${user.updated_at}"></td>-->
-        <div class="font-color">
+        <div class="font_color">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6 border-white ">
@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="col-3 border">
-                        開設情報
+                        <p>開設情報</p>
                         <p th:each="user : ${users}" th:object="${users}"
                            th:text="${user.created_at}">
                         <p>更新情報</p>
