@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 border-bottom ">
                     <div class="container" style="padding: 1rem">
                         <div style="line-height: 1.15;">
                             <!--                        <h2 class="mt-4"><font face="Sans-serif">口座番号</font></h2>-->
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 border-bottom">
                     <img th:src="@{/Test_image/bank.png}" style="width: 300px;height: 200px;">
                 </div>
 
@@ -93,15 +93,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 border-bottom">
+                    <div class = "mt-3"></div>
                     <img th:src="@{/Test_image/bank2.png}" style="width: 300px;height: 200px;">
                 </div>
-                <div class="col-3" style="padding: 1rem">
+                <div class="col-3 border-bottom border-5">
                     <div style="line-height: 1.15;">
+                        <div class = "mt-3">
                         <b style="font-size: 25px; font-family:Yu Gothic">銀行</b>
-                        <br>
+                            </div>
+
+
                         <b th:each="user : ${users}" th:object="${users}"
                            th:text="${user.bank}" style="font-size: 45px;　font-weight: 700;　font-family:Yu Gothic"></b>
+
                     </div>
                     <br>
                     <div style="line-height: 1.15;">
@@ -131,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="col-3 border">
+                <div class="col-3 border-bottom">
                     <p class="mt-5">開設情報</p>
                     <tr th:each="user : ${users}" th:object="${users}">
                        <td th:text="${#temporals.format(user.created_at,'yyyy/MM/dd HH:mm')}"></td>
@@ -142,7 +147,7 @@
                     </tr>
 
                 </div>
-                <div class="col-3">
+                <div class="col-3 border-bottom">
                     <img th:src="@{/Test_image/bank3.png}" style="width: 300px;height: 200px;">
                 </div>
             </div>
