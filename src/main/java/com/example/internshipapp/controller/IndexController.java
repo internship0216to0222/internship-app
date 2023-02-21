@@ -29,4 +29,9 @@ public class IndexController {
         System.out.println(userhi);
         return "index.html";
     }
+
+    @GetMapping("test")
+    public String test() {
+        return "test.html";
+    }
 }
