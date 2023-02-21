@@ -108,11 +108,13 @@
                 </div>
                 <div class="col-3 border">
                     <p class="mt-5">開設情報</p>
-                    <p th:each="user : ${users}" th:object="${users}"
-                       th:text="${user.created_at}">
+                    <tr th:each="user : ${users}" th:object="${users}">
+                       <td th:text="${#temporals.format(user.created_at,'yyyy/MM/dd HH:mm')}"></td>
+                    </tr>
                     <p>更新情報</p>
-                    <p th:each="user : ${users}" th:object="${users}"
-                       th:text="${user.updated_at}">
+                    <tr th:each="user : ${users}" th:object="${users}">
+                        <td th:text="${#temporals.format(user.updated_at,'yyyy/MM/dd HH:mm')}"></td>
+                    </tr>
                 </div>
                 <div class="col-3 border">
                     <img th:src="@{/Test_image/bank3.png}" style="width: 300px;height: 200px;">
