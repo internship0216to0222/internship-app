@@ -31,7 +31,7 @@
                             <b style="font-size: 25px; font-family:Yu Gothic">名前</font></b>
                         </div>
                         <div class="mt-4">
-                            <b style="font-size: 35px; font-family:Yu Gothic" th:each=user:${users} th:object="${users}"
+                            <b style="font-size: 35px; font-family:Yu Gothic" th:each="user:${users}" th:object="${users}"
                                th:text="${user.name}"></b>
                             <div class="mt-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
