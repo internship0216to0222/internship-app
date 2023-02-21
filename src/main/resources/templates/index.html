@@ -15,7 +15,7 @@
     <img th:src="@{/Test_image/header.png}" style="width: 100%;height: 150px;" class="posi">
     <!--        <div class="contents_header"></div>-->
     </img>
-</header>
+</header>-
 
 <div class="contents">
     <div class="font_color">
@@ -139,13 +139,15 @@
                 </div>
 
                 <div class="col-3 border-bottom">
-                    <p class="mt-5">開設情報</p>
+                    <h2 class="mt-5">開設情報</h2>
                     <tr th:each="user : ${users}" th:object="${users}">
-                       <td th:text="${#temporals.format(user.created_at,'yyyy/MM/dd HH:mm')}"></td>
+                       <b style="font-size: 25px; font-family:Yu Gothic" th:text="${#temporals.format(user.created_at,'yyyy/MM/dd HH:mm')}"
+                    ></b>
                     </tr>
-                    <p>更新情報</p>
+                    <h2>更新情報</h2>
                     <tr th:each="user : ${users}" th:object="${users}">
-                        <td th:text="${#temporals.format(user.updated_at,'yyyy/MM/dd HH:mm')}"></td>
+                        <b style="font-size: 25px; font-family:Yu Gothic"th:text="${#temporals.format(user.updated_at,'yyyy/MM/dd HH:mm')}"></td>
+                        </b>
                     </tr>
 
                 </div>
