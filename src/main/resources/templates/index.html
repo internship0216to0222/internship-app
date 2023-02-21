@@ -127,6 +127,7 @@
                                   th:object="${users}"
                                   th:text="${user.id}"></b></p>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-3" style="padding: 1rem; border: none;">
@@ -161,7 +162,13 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 </div>
-
+<div>
+<div class="col-2">
+    <b style="font-size: 15px; font-family:Yu Gothic">ログイン日時</b>
+    <b  style="font-size: 15px; font-family:Yu Gothic" th:each="user_login_history : ${userhi}" th:object="${userhi}"
+        th:text="${user_login_history.logged_in_at}"></b>
+</div>
+</div>
 <footer>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#0099ff" fill-opacity="1"
