@@ -130,21 +130,17 @@
 
                     </div>
                 </div>
-                <div class="col-3" style="padding: 1rem; border: none;">
-                    <div style="line-height: 1.15;">
-                        <b class="mt-5" style="font-size: 25px; font-family:Yu Gothic">開設情報</b>
-                        <br>
-                        <p th:each="user : ${users}" th:object="${users}"
-                           th:text="${user.created_at}" style="font-size: 45px;　font-weight: 700;　font-family:Arial">
-                            <br>
-                        </p>
-                    </div>
-                    <div style="line-height: 1.15;">
-                        <b style="font-size: 25px; font-family:Yu Gothic">更新情報</b>
-                        <br>
-                        <p th:each="user : ${users}" th:object="${users}"
-                           th:text="${user.updated_at}" style="font-size: 45px;　font-weight: 700;　font-family:Arial">
-                    </div>
+
+                <div class="col-3 border">
+                    <p class="mt-5">開設情報</p>
+                    <tr th:each="user : ${users}" th:object="${users}">
+                       <td th:text="${#temporals.format(user.created_at,'yyyy/MM/dd HH:mm')}"></td>
+                    </tr>
+                    <p>更新情報</p>
+                    <tr th:each="user : ${users}" th:object="${users}">
+                        <td th:text="${#temporals.format(user.updated_at,'yyyy/MM/dd HH:mm')}"></td>
+                    </tr>
+
                 </div>
                 <div class="col-3">
                     <img th:src="@{/Test_image/bank3.png}" style="width: 300px;height: 200px;">
